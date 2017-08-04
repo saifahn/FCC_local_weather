@@ -60,17 +60,17 @@ function weatherFromData(data) {
 
 // take the user's input and use it as the city for the API call
 function urlFromInput(input) {
-  return "http://api.openweathermap.org/data/2.5/weather?q=" + input + "&units=metric&appid=223075ec95c322193c0832f092740b48";
+  return "https://api.openweathermap.org/data/2.5/weather?q=" + input + "&units=metric&appid=223075ec95c322193c0832f092740b48";
 }
 
 $(document).ready(function(){
   // on click of the button
       // the IP API, store city and country for lookup
-    $.getJSON("http://ipinfo.io", function(data){
+    $.getJSON("https://ipinfo.io", function(data){
       city = data.city;
       country = data.country;
       // make a URL to call the weather API
-      var url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "," + country + "&units=metric&appid=223075ec95c322193c0832f092740b48";
+      var url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "," + country + "&units=metric&appid=223075ec95c322193c0832f092740b48";
       $.getJSON(url, function(data) {
         weatherFromData(data);
       });
