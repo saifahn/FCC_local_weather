@@ -8,17 +8,13 @@ body {
   color: #21201f;
 }
 
-button {
-  margin: auto;
-  font-family: 'Open Sans', sans-serif;
-}
-
 i {
   font-size: 7em;
   margin: 0.2em;
 }
 
 #user-city {
+  font-family: 'Viga', sans-serif;
   font-size: 1.4em;
   text-align: left;
   border: solid 3px #565656;
